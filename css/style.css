@@ -1,30 +1,126 @@
+:root{
+--font-family: "bitcount-mono-single-square", sans-serif;
+--font-title: "carol-gothic", sans-serif;
+--acent-color: #08CB00;
+--text-change: #b958fe;
+--background-color: black;
+--text-color: #E83C91;
+} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 body {
-    background-color: black;
-    color: #E83C91;
-    font-family: "bitcount-mono-single-square", sans-serif;
+    background-image: url(../img/fondo.jpg);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1.4em;
+    background-size: 100% auto;
+    image-rendering: pixelated;
+    cursor: url('../img/cursor.png') 0 0, auto;
+    text-shadow: -2px 1px 1px black;
 }
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
 h1, h2{
-    font-family: "carol-gothic", sans-serif;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    margin: 1em 0;
 }
 
 h1{
     width: 100%;
     text-align: center;
-    font-size: 80px;
+    font-size: 4rem;
+    margin-bottom: .0em;
+    font-weight: 100;
+    margin-top: 0;
 }
 
 h2{
     width: 100%;
     text-align: center;
-    font-size: 40px;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+p {
+    max-width: 60ch;
+}
+
+a{
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin: .5em 0;
+    border: 2px solid var(--acent-color);
+    background-color: var(--background-color);
+    color: var(--background-color);
+    color: var(--acent-color);
+    transition: all .5s ease-in-out;
+    width: 100%;
+    padding: .5em .5em;
+}
+
+a {
+    color: var(--acent-color);
+    transition: all .5s ease-in-out;
+}
+
+a:visited{
+    text-decoration: none;
+    color:var(--acent-color);
+    opacity: .8;
+}
+
+a:hover{
+    color:var(--text-change);
+    opacity: .8;
 }
 
 main{
-    width: 100%;
-    max-width: 800px;
+    width: 66%;
     margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    html{ font-size: 150%;}
+}
+
+@media (min-width: 1024px){
+    html{font-size: 200%;}
+}
+
+img.img-guy {
+    display:block;
+    margin: 0 auto;
+    padding: 0%;
+    max-width: 100%;
+    height: auto;
+    width: 20%;
+}
+
+img.img-pik {
+    max-width: 100%;
+    height:auto;
+    width: 40%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
