@@ -1,0 +1,30 @@
+html{
+    font-size: 20px;
+}
+
+body {
+    background-color: black;
+    color: #E83C91;
+    font-family: "bitcount-mono-single-square", sans-serif;
+}
+h1, h2{
+    font-family: "carol-gothic", sans-serif;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+main{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
