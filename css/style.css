@@ -215,3 +215,10 @@ section {
     color: var(--text-change);
     border-color: var(--text-change);
 }
+
+.img-working{
+    display: block;
+    margin: 5em auto;
+    width: 700px !important;
+    height: auto !important;
+}
