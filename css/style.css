@@ -1,6 +1,7 @@
 :root{
 --font-family: "bitcount-mono-single-square", sans-serif;
 --font-title: "carol-gothic", sans-serif;
+--font-creep: "Creepster", cursive;
 --acent-color: #08CB00;
 --text-change: #b958fe;
 --background-color: black;
@@ -13,10 +14,11 @@
 }
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/FONDO.jpg);
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
@@ -28,16 +30,15 @@ body {
 }
 
 main{
-    width: 80%;
+    width: 66%;
     margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: var(--font-title);
+    font-family: var(--font-creep);
     text-transform: uppercase;
     margin: 1em 0;
     font-weight: 100;
-    
 }
 
 h1{
@@ -46,7 +47,7 @@ h1{
     font-size: 4rem;
     margin-bottom: .0em;
     font-weight: 100;
-    margin-top: 0;
+    margin-top: 1em;
 }
 
 h2{
@@ -68,16 +69,10 @@ a{
     margin: .5em 0;
     border: 2px solid var(--acent-color);
     background-color: var(--background-color);
-    color: var(--background-color);
     color: var(--acent-color);
     transition: all .5s ease-in-out;
     width: 100%;
     padding: .5em .5em;
-}
-
-a {
-    color: var(--acent-color);
-    transition: all .5s ease-in-out;
 }
 
 a:visited{
@@ -89,11 +84,6 @@ a:visited{
 a:hover{
     color:var(--text-change);
     opacity: .8;
-}
-
-main{
-    width: 66%;
-    margin: 0 auto;
 }
 
 @media (min-width: 768px){
@@ -125,4 +115,103 @@ img.img-pik {
 
 .text-right {
     text-align: right;
+}
+
+@keyframes melting {
+    0% {
+        text-shadow: 
+            0 0 0 var(--text-color),
+            0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 
+            0 5px 10px var(--text-color),
+            0 20px 40px rgba(0, 0, 0, 0.8),
+            0 30px 60px rgba(233, 60, 145, 0.5);
+    }
+    100% {
+        text-shadow: 
+            0 10px 20px var(--text-color),
+            0 40px 80px rgba(0, 0, 0, 0.9),
+            0 60px 100px rgba(233, 60, 145, 0.3);
+    }
+}
+
+.melting-title {
+    animation: melting 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+}
+
+.iconos-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 1.5em 0;
+    flex-wrap: wrap;
+}
+
+.icono {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.icono::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    color: var(--acent-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-family: var(--font-family);
+    z-index: 999;
+}
+
+.icono:hover::after {
+    opacity: 1;
+}
+
+.icono:hover {
+    filter: drop-shadow(0 0 10px var(--acent-color));
+}
+
+.icono:active {
+    opacity: 0.5;
+}
+
+section {
+    margin: 3em 0;
+    padding: 2em 0;
+    min-height: 80vh;
+}
+
+.back-btn {
+    background: none;
+    border: 2px solid var(--acent-color);
+    color: var(--acent-color);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1em;
+    transition: all 0.3s;
+    margin: 1em 0;
+}
+
+.back-btn:hover {
+    color: var(--text-change);
+    border-color: var(--text-change);
 }
