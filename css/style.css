@@ -18,7 +18,7 @@ html{
 }
 
 body {
-    background-image: url(../img/FONDO.jpg);
+    background-image: url(../img/fondo.jpg);
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
