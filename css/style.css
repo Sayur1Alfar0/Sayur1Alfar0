@@ -55,7 +55,8 @@ p {
     max-width: 60ch;
 }
 
-a{
+/* LINKS NORMALES (no los de iconos) */
+a:not(.creepy-link){
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
@@ -67,17 +68,27 @@ a{
     transition: all .5s ease-in-out;
     width: 100%;
     padding: .5em .5em;
+    outline: none;
+    box-shadow: none;
 }
 
-a:visited{
+a:not(.creepy-link):visited{
     text-decoration: none;
     color:var(--acent-color);
     opacity: .8;
+    outline: none;
 }
 
-a:hover{
+a:not(.creepy-link):hover{
     color:var(--text-change);
     opacity: .8;
+    outline: none;
+}
+
+a:not(.creepy-link):focus,
+a:not(.creepy-link):active{
+    outline: none;
+    box-shadow: none;
 }
 
 @media (min-width: 768px){
@@ -313,6 +324,9 @@ section {
     width: 180px;
     height: 180px;
     cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .creepy-icon img{
@@ -320,6 +334,8 @@ section {
     height: 100%;
     object-fit: contain;
     display: block;
+    border: none !important;
+    outline: none !important;
 } 
 
 #bodoque{
@@ -362,14 +378,6 @@ section {
     right: 50px;
 }
 
-#eye{
-    width: 200px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .creepy-icon:hover{
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px red);
@@ -396,4 +404,58 @@ section {
 
 .creepy-icon:hover::after{
     opacity: 1;
+}
+
+/* LINKS DE ICONOS CREEPY (sin bordes) */
+a.creepy-link {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    display: inline !important;
+    background: none !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a.creepy-link:visited,
+a.creepy-link:hover,
+a.creepy-link:focus,
+a.creepy-link:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    color: inherit !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+img:focus {
+    outline: none !important;
+}
+
+/* ========== RESET TOTAL PARA LINKS DE ICONOS ========== */
+a.creepy-link {
+    all: unset !important;
+    display: inline !important;
+    cursor: pointer !important;
+}
+
+a.creepy-link:any-link,
+a.creepy-link:link,
+a.creepy-link:visited,
+a.creepy-link:hover,
+a.creepy-link:focus,
+a.creepy-link:active {
+    all: unset !important;
+    display: inline !important;
+    cursor: pointer !important;
 }

@@ -2,37 +2,75 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <title>Weird kids</title>
-
     <link rel="icon" type="image/png" href="./img/domo.jpg">
-
-    <link rel="stylesheet" href="./css/style.css">
-
+    
+    <!-- ESTO PRIMERO - Resetear links de iconos ANTES de cargar style.css -->
     <style>
+        a.creepy-link,
+        a.creepy-link * {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+        
+        a.creepy-link:any-link,
+        a.creepy-link:visited,
+        a.creepy-link:hover,
+        a.creepy-link:focus,
+        a.creepy-link:active {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            color: inherit !important;
+        }
+        
         body{
             background-image: none !important;
             background-color: black;
         }
     </style>
-
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
+<a href="https://youtu.be/bC89AB4YL6g?si=CcErzNbMhvyrjTvA" class="creepy-link">
+    <div class="creepy-icon" id="pinkiepie" data-tooltip="">
+        <img src="./img/pinkiepie.png">
+    </div>
+</a>
 
-<div class="creepy-icon" id="pinkiepie" data-tooltip="">
-    <img src="./img/pinkiepie.png">
-</div>
-<img src="./img/rainbow.png" class="creepy-icon" id="rainbow">
-<img src="./img/bodoque.png" class="creepy-icon" id="bodoque">
-<img src="./img/friends.png" class="creepy-icon" id="friends">
-<img src="./img/boiled.png" class="creepy-icon" id="boiled">
-<img src="./img/bubble.png" class="creepy-icon" id="bubble">
-<img src="./img/jeff.png" class="creepy-icon" id="jeff">
-<img src="./img/salad.png" class="creepy-icon" id="salad">
+<a href="https://youtu.be/43AuJjuxqAw?si=7QwRoWEt7ClHnYcC" class="creepy-link">
+    <img src="./img/rainbow.png" class="creepy-icon" id="rainbow">
+</a>
+
+<a href="https://youtu.be/WYp2ekEN6Vo?si=9gxv-lynVaMALhGC" class="creepy-link">
+    <img src="./img/bodoque.png" class="creepy-icon" id="bodoque">
+</a>
+
+<a href="https://youtu.be/32XkvK7hLVE?si=3g_8snmRIQQkccUI" class="creepy-link">
+    <img src="./img/friends.png" class="creepy-icon" id="friends">
+</a>
+
+<a href="https://youtu.be/YhO0kXDEL2I?si=cZWsvhF1aAXQRwfH" class="creepy-link">
+    <img src="./img/boiled.png" class="creepy-icon" id="boiled">
+</a>
+
+<a href="https://youtube.com/playlist?list=PLHovnlOusNLgvAbnxluXCVB3KLj8e4QB-&si=gT2Mw1R1-8MkZKFE" class="creepy-link">
+    <img src="./img/bubble.png" class="creepy-icon" id="bubble">
+</a>
+
+<a href="https://youtu.be/VkaEkl4VgeU?si=L9FEUaaJ4bTe4Pi6" class="creepy-link">
+    <img src="./img/jeff.png" class="creepy-icon" id="jeff">
+</a>
+
+<a href="https://youtube.com/playlist?list=PL9383CC2C6DBD902F&si=URAMcyFAx3_3mfXK" class="creepy-link">
+    <img src="./img/salad.png" class="creepy-icon" id="salad">
+</a>
 
     <main>
 
@@ -58,7 +96,6 @@
     });
 
     </script>
-
 
     </main>
 
