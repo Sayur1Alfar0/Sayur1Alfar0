@@ -296,3 +296,104 @@ section {
 .tarot-back{
     transform: rotateY(180deg);
 }
+
+
+#eye{
+    width: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+}
+
+.creepy-icon{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.creepy-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+} 
+
+#bodoque{
+    top: 50px;
+    left: 50px;
+}
+
+#friends{
+    top: 400px;
+    left: 70px;
+}
+
+#salad{
+    top: 400px;
+    left: 300px;
+}
+
+#bubble{
+    top: 50px;
+    left: 800px;
+}
+
+#pinkiepie{
+    top: 50px;
+    right: 50px;
+}
+
+#rainbow{
+    bottom: 30px;
+    left: 800px;
+}
+
+#jeff{
+    top: 50px;
+    right: 800px;
+}
+
+#boiled{
+    bottom: 50px;
+    right: 50px;
+}
+
+#eye{
+    width: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.creepy-icon:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px red);
+}
+
+.creepy-icon::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: rgba(0,0,0,0.9);
+    color: var(--acent-color);
+    padding: 5px 8px;
+    border-radius: 5px;
+    
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.3s;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.creepy-icon:hover::after{
+    opacity: 1;
+}

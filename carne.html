@@ -2,18 +2,63 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
+    <title>Weird kids</title>
+
+    <link rel="icon" type="image/png" href="./img/domo.jpg">
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Trabajando...</title>
+    <style>
+        body{
+            background-image: none !important;
+            background-color: black;
+        }
+    </style>
+
 </head>
 
 <body>
 
+
+<div class="creepy-icon" id="pinkiepie" data-tooltip="">
+    <img src="./img/pinkiepie.png">
+</div>
+<img src="./img/rainbow.png" class="creepy-icon" id="rainbow">
+<img src="./img/bodoque.png" class="creepy-icon" id="bodoque">
+<img src="./img/friends.png" class="creepy-icon" id="friends">
+<img src="./img/boiled.png" class="creepy-icon" id="boiled">
+<img src="./img/bubble.png" class="creepy-icon" id="bubble">
+<img src="./img/jeff.png" class="creepy-icon" id="jeff">
+<img src="./img/salad.png" class="creepy-icon" id="salad">
+
     <main>
 
-        <img src="./img/trabajo.png" class="img-working">
+        <img src="./img/ojo.png" id="eye">
+
+        <script>
+
+    const eye = document.getElementById("eye");
+
+    document.addEventListener("mousemove", (e) => {
+
+        const eyeX = eye.offsetLeft + eye.offsetWidth / 2;
+        const eyeY = eye.offsetTop + eye.offsetHeight / 2;
+
+        const angle = Math.atan2(
+            e.clientY - eyeY,
+            e.clientX - eyeX
+        );
+
+        eye.style.transform =
+            `translate(-50%, -50%) rotate(${angle}rad)`;
+
+    });
+
+    </script>
+
 
     </main>
 
