@@ -459,3 +459,25 @@ a.creepy-link:active {
     display: inline !important;
     cursor: pointer !important;
 }
+
+.reproductor-img {
+    width: 800px;
+    height: 800px;
+}
+
+/* PANTALLA DEL MP3 */
+.mp3-pantalla {
+    position: absolute;
+    top: 145px;
+    left: 305px;
+    width: 210px;
+    height: 190px;
+    background: #000;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

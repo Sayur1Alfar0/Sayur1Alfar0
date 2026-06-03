@@ -3,19 +3,85 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <title>EMO MUSIC!</title>
+    <link rel="icon" type="image/png" href="./img/zim.png">
     <link rel="stylesheet" href="./css/style.css">
+    
+    <style>
+        body {
+            background-color: black !important;
+            background-image: none !important;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    <title>Trabajando...</title>
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .reproductor-img {
+            width: 600px;
+            height: 600px;
+            object-fit: contain;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
     <main>
-
-        <img src="./img/trabajo.png" class="img-working">
-
+        <img src="./img/ptvcol.png" class="reproductor-img" id="reproductor" alt="Reproductor MP3">
     </main>
+
+    <audio id="audioPlayer"></audio>
+
+    <script>
+        const reproductor = document.getElementById('reproductor');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        let currentIndex = 0;
+
+        const mp3s = [
+            { name: 'A Match Into Water', img: './img/ptvcol.png', url: './music/A Match Into Water.mp3' },
+            { name: 'Circles', img: './img/ptvcirc.png', url: './music/Circles.mp3' },
+            { name: 'Famous Last Words', img: './img/mcrb.png', url: './music/Famous Last Words.mp3' },
+            { name: 'Im Not Okay', img: './img/mcr.png', url: './music/Im Not Okay (I Promise).mp3' },
+            { name: 'LosT', img: './img/bmth.png', url: './music/LosT.mp3' }
+        ];
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            
+            if (e.deltaY > 0) {
+                currentIndex = (currentIndex + 1) % mp3s.length;
+            } else {
+                currentIndex = (currentIndex - 1 + mp3s.length) % mp3s.length;
+            }
+            
+            if (reproductor) {
+                reproductor.src = mp3s[currentIndex].img;
+                audioPlayer.src = mp3s[currentIndex].url;
+                audioPlayer.play();
+                console.log('🎵 Reproduciendo: ' + mp3s[currentIndex].name);
+            }
+        }, { passive: false });
+    </script>
 
 </body>
 
